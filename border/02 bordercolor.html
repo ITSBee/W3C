@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>border的颜色</title>
+	<style>
+		div {
+			margin: 20px;
+		}
+
+		/* border颜色原理 */
+		.box01 {
+			border: 2px solid;
+			color: inherit;
+		}
+
+		/* 常规方法 */
+		.add01 {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #ccc;
+		}
+		
+		.add01:before,
+		.add01:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			content: '';
+			background: #ccc;
+		}
+
+		.add01:before {
+			width: 4px;
+			height: 32px;
+			margin-left: -2px;
+			margin-top: -16px;
+		}
+		
+		.add01:after {
+			width: 32px;
+			height: 4px;
+			margin-left: -16px;
+			margin-top: -2px;
+		}
+
+		.add01:hover {
+			border-color: #06c;
+		}
+
+		.add01:hover:before,
+		.add01:hover:after {
+			background-color: #06c;
+		}
+
+		/* boder颜色方法 */
+		.add02 {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			border: 1px solid;
+			color: #ccc;
+		}
+		
+		.add02:before,
+		.add02:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			content: '';
+		}
+
+		.add02:before {
+			border-left: 4px solid;
+			height: 32px;
+			margin-left: -2px;
+			margin-top: -16px;
+		}
+		
+		.add02:after {
+			width: 32px;
+			border-top: 4px solid;
+			margin-left: -16px;
+			margin-top: -2px;
+		}
+
+		.add02:hover {
+			color: #06c;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- border颜色原理 -->
+	<div class="box01">边框的颜色</div>
+
+	<!-- 常规方法 -->
+	<div class="add01"></div>
+
+	<!-- border颜色的使用 -->
+	<div class="add02"></div>
+</body>
+</html>

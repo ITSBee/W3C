@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>直角普通分页页码</title>
+	<style>
+		
+		.page-normal {
+			text-align: center;
+		}
+
+		.ellipsis, .page-disable, .page-normal a {
+			display: inline-block;
+			border: 1px solid;
+			padding: 5px 10px;
+			color: #ccc;
+			text-decoration: none;
+		}
+
+		.page-normal a:hover {
+			background: #eee;
+			color: #999;
+		}
+
+		.page-normal .page-current {
+			border: 1px solid;
+			padding: 5px 10px;
+			background: #eee;
+			color: #999;
+		}
+
+		.page-pre i, .page-next i {
+			display: inline-block;
+			width: 5px;
+			height: 9px;
+			background: url(images/bg_hotsale.gif) no-repeat;
+		}
+
+		.page-pre i {
+			margin-right: 5px;
+			background-position: -80px -608px;
+		}
+		
+		.page-pre:hover i {
+			background-position: -68px -608px;
+		}
+
+		.page-next i {
+			margin-left: 5px;
+			background-position: -74px -608px;
+		}
+
+		.page-next:hover i {
+			background-position: -62px -608px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<h3>行内元素中间有空隙</h3>
+		<p>产生原因：换行符、tab（制表符）、空格</p>
+		<dl>
+			<dt>解决方法：</dt>
+			<dd>1、元素写成一行；</dd>
+			<dd>2、设置font-size: 0</dd>
+		</dl>
+	</div>
+	
+	<div class="page-normal">
+		<span class="page-pre page-disable"><i></i>上一页</span>
+		<span class="page-current">1</span>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<span class="ellipsis">...</span>
+		<a href="#">96</a>
+		<a href="#">97</a>
+		<a href="#">98</a>
+		<a href="#">99</a>
+		<a href="#">100</a>
+		<a class="page-next" href="#">下一页<i></i></a>
+	</div>
+
+</body>
+</html>

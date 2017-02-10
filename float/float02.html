@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>float特性</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	
+	<h1>Float的特性是：<em>包裹性</em>和<em>破坏性</em></h1>
+	
+	<dl class="moudle">
+		<dt>包裹特性（<em>BFC: block formatting conext - “块级格式化上下文”</em>）：</dt>
+		<dd>1、收缩</dd>
+		<dd>2、坚挺</dd>
+		<dd>3、隔绝</dd>
+		<dd>
+			<dl>
+				<dt>具有包裹性的其他属性</dt>
+				<dd>display: inddne-block/table-cell/…</dd>
+				<dd>position: absolute（近亲）/fixed/sticky</dd>
+				<dd>overflow: hidden/scroll</dd>
+			</dl>
+		</dd>
+	</dl>
+
+	<dl class="moudle">
+		<dt>破坏特性：</dt>
+		<dd>容器被破坏：父元素高度塌陷</dd>
+		<dd>
+			<dl>
+				<dt>具有破坏性的其他属性</dt>
+				<dd>display: none</dd>
+				<dd>position: absolute（近亲）/fixed/sticky</dd>
+			</dl>
+		</dd>
+	</dl>
+
+</body>
+</html>
